@@ -10,7 +10,7 @@ import com.roynaldi19.bfaa07_02sharedpreferences.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var mUserPreference: UserPreference
+    private lateinit var userPreference: UserPreference
     private lateinit var binding: ActivityMainBinding
 
     private var isPreferenceEmpty = false
@@ -19,9 +19,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val resultLauncher = registerForActivityResult(
         StartActivityForResult()
     ) { result: ActivityResult ->
-        /*
-        Akan dipanggil ketika com.roynaldi19.bfaa07_02sharedpreferences.FormUserPreferenceActivity ditutup
-         */
         if (result.data != null && result.resultCode == FormUserPreferenceActivity.RESULT_CODE) {
             userModel = result.data?.getParcelableExtra<UserModel>(FormUserPreferenceActivity.EXTRA_RESULT) as UserModel
             populateView(userModel)
@@ -36,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar?.title = "My User Preference"
 
-        mUserPreference = UserPreference(this)
+        userPreference = UserPreference(this)
 
         showExistingPreference()
 
@@ -44,18 +41,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    /*
-    Menampilkan preference yang ada
-     */
     private fun showExistingPreference() {
-        userModel = mUserPreference.getUser()
+        userModel = userPreference.getUser()
         populateView(userModel)
         checkForm(userModel)
     }
 
-    /*
-    Set tampilan menggunakan preferences
-    */
     private fun populateView(userModel: UserModel) {
         binding.tvName.text =
             if (userModel.name.toString().isEmpty()) "Tidak Ada" else userModel.name

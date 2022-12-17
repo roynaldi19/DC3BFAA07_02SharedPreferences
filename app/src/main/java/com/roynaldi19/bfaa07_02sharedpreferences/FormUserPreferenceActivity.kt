@@ -13,6 +13,8 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityFormUserPreferenceBinding
 
+    private lateinit var userModel: UserModel
+
     companion object {
         const val EXTRA_TYPE_FORM = "extra_type_form"
         const val EXTRA_RESULT = "extra_result"
@@ -26,7 +28,6 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         private const val FIELD_IS_NOT_VALID = "Email tidak valid"
     }
 
-    private lateinit var userModel: UserModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -120,9 +121,7 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    /*
-    Save data ke dalam preferences
-     */
+
     private fun saveUser(name: String, email: String, age: String, phoneNo: String, isLoveMU: Boolean) {
         val userPreference = UserPreference(this)
 
@@ -136,12 +135,6 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         Toast.makeText(this, "Data tersimpan", Toast.LENGTH_SHORT).show()
     }
 
-    /**
-     * Cek apakah emailnya valid
-     *
-     * @param email inputan email
-     * @return true jika email valid
-     */
 
     private fun isValidEmail(email: CharSequence): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
