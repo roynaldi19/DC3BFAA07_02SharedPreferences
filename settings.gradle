@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "BFAA07_02SharedPreferences"
+rootProject.name = "DC3_07SharedPreferences"
 include ':app'

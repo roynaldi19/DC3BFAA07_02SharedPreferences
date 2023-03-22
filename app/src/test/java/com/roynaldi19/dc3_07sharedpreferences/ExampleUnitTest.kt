@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa07_02sharedpreferences
+package com.roynaldi19.dc3_07sharedpreferences
 
 import org.junit.Test
 

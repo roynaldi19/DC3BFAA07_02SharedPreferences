@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BFAA07_02SharedPreferences</string>
+    <string name="app_name">DC3_07SharedPreferences</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="phone_number">No Handphone</string>

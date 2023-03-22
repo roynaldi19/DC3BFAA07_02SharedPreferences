@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa07_02sharedpreferences
+package com.roynaldi19.dc3_07sharedpreferences
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.View
 import androidx.activity.result.ActivityResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import com.roynaldi19.bfaa07_02sharedpreferences.databinding.ActivityMainBinding
+import com.roynaldi19.dc3_07sharedpreferences.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

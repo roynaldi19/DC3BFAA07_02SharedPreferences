@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa07_02sharedpreferences
+package com.roynaldi19.dc3_07sharedpreferences
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.roynaldi19.bfaa07_02sharedpreferences.databinding.ActivityFormUserPreferenceBinding
+import com.roynaldi19.dc3_07sharedpreferences.databinding.ActivityFormUserPreferenceBinding
 
 class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
 
